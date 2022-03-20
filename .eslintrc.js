@@ -3,7 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended", "google"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -14,6 +18,10 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
+    indent: ["error", 4],
+    "linebreak-style": ["error", "unix"],
+    quotes: ["error", "single"],
+    semi: ["error", "never"],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
   },
